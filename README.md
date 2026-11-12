@@ -5,7 +5,9 @@ Code for our DA-3041 project on
 > R. A. Irizarry, *Weighted estimation of harmonic components in a musical sound signal*,
 > Journal of Time Series Analysis 23(1), 29–48, 2002.
 
-Group 3: Rachit Gupta, Nilay Mittal, Aditya Garg, Freya Sheth
+Group 8: Rachit Gupta, Nilay Mittal, Aditya Garg, Freya Sheth (IIT Guwahati).
+
+**Live demo:** https://YOUR-USERNAME.github.io/harmonic-wls-demo/
 
 The code is in Python. It is written to be read by someone who knows R: every function says what
 it computes, and where there is a direct R equivalent (`lm()`, `nls()`, `integrate()`,
@@ -22,8 +24,7 @@ it computes, and where there is a direct R equivalent (`lm()`, `nls()`, `integra
 | `hwls/simulate.py` | Simulated signals with a known truth, for checking the theorems |
 | `experiments/e1` … `e7` | One script per study; each writes its numbers to `results/` and its figures to `figures/` |
 | `data/` | The six recordings we used (see below) |
-| `web/index.html` | The demo page: one file, works offline in any modern browser |
-| `web/src/`, `web/build.py` | Sources of the demo page (`hwls.js` is a line-by-line JavaScript port of the estimator) |
+| `web/src/`, `web/build.py` | Sources of the demo page (`hwls.js` is a line-by-line JavaScript port of the estimator). `python3 web/build.py` writes the single-file page `web/index.html`, which is what the live demo serves |
 
 ## Running it
 
@@ -32,7 +33,7 @@ pip install numpy scipy matplotlib soundfile
 cd experiments
 ./run_all.sh              # all studies, about 4 minutes
 FAST=1 ./run_all.sh       # fewer Monte Carlo runs, for a quick check
-python3 ../web/build.py   # rebuild the demo page from the new results
+python3 ../web/build.py   # build the demo page web/index.html from the new results
 ```
 
 Each script can also be run on its own, e.g. `python3 e5_ext1_pooled_pitch.py`.
