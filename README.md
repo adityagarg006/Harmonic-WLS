@@ -24,7 +24,7 @@ it computes, and where there is a direct R equivalent (`lm()`, `nls()`, `integra
 | `hwls/simulate.py` | Simulated signals with a known truth, for checking the theorems |
 | `experiments/e1` … `e7` | One script per study; each writes its numbers to `results/` and its figures to `figures/` |
 | `data/` | The six recordings we used (see below) |
-| `web/src/`, `web/build.py` | Sources of the demo page (`hwls.js` is a line-by-line JavaScript port of the estimator). `python3 web/build.py` writes the single-file page `web/index.html`, which is what the live demo serves |
+
 
 ## Running it
 
@@ -33,7 +33,6 @@ pip install numpy scipy matplotlib soundfile
 cd experiments
 ./run_all.sh              # all studies, about 4 minutes
 FAST=1 ./run_all.sh       # fewer Monte Carlo runs, for a quick check
-python3 ../web/build.py   # build the demo page web/index.html from the new results
 ```
 
 Each script can also be run on its own, e.g. `python3 e5_ext1_pooled_pitch.py`.
