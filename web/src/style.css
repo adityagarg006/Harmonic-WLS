@@ -1,0 +1,58 @@
+:root {
+  --paper: #fbfaf7; --ink: #1d1d1b; --ink-2: #4a4945; --muted: #8a8984; --line: #d9d7d0; --grid: #e7e5df;
+  --panel: #ffffff; --accent: #2a5db0;
+  --band: #cde2fb; --band-2: #fde0d2;
+  --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; --s4: #6250d6; --s5: #e87ba4; --s6: #008300; --s7: #6250d6; --s8: #e34948;
+  --good: #1a7f4b; --bad: #b3372f;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink);
+  font: 17px/1.55 Georgia, "Iowan Old Style", "Times New Roman", serif; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 28px 24px 60px; }
+header { border-bottom: 1px solid var(--line); padding-bottom: 14px; margin-bottom: 8px; }
+header h1 { font-size: 26px; font-weight: normal; margin: 0 0 4px; }
+header p { margin: 0; color: var(--ink-2); font-size: 15px; }
+#nav { display: flex; flex-wrap: wrap; gap: 2px 18px; padding: 10px 0 16px; border-bottom: 1px solid var(--line);
+  font: 14px/1.4 "Helvetica Neue", Arial, sans-serif; }
+#nav button { background: none; border: 0; padding: 4px 0; color: var(--ink-2); cursor: pointer; font: inherit; border-bottom: 2px solid transparent; }
+#nav button[aria-current="true"] { color: var(--ink); border-bottom-color: var(--ink); }
+h2 { font-size: 22px; font-weight: normal; margin: 26px 0 8px; }
+h3 { font: 600 14px/1.4 "Helvetica Neue", Arial, sans-serif; margin: 26px 0 8px; color: var(--ink-2); letter-spacing: .02em; }
+p { margin: 0 0 12px; max-width: 46em; }
+.eq { white-space: nowrap; font-style: italic; }
+code { font: 14px Menlo, Consolas, monospace; background: #f0eee8; padding: 1px 4px; }
+.controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; margin: 12px 0;
+  font: 14px "Helvetica Neue", Arial, sans-serif; }
+.controls .ctl { display: flex; align-items: center; gap: 6px; }
+.controls label, .controls .lbl { color: var(--ink-2); }
+.controls .row { display: flex; align-items: center; gap: 6px; }
+select, button { font: 14px "Helvetica Neue", Arial, sans-serif; }
+button { background: var(--panel); border: 1px solid #b9b7af; padding: 5px 11px; cursor: pointer; color: var(--ink); }
+button:hover { border-color: var(--ink-2); }
+button:disabled { opacity: .5; cursor: default; }
+.radios { display: flex; flex-wrap: wrap; gap: 4px 12px; }
+.radios label { display: flex; align-items: center; gap: 3px; cursor: pointer; }
+ol.substeps { list-style: none; display: flex; flex-wrap: wrap; gap: 4px; padding: 0; margin: 14px 0 10px;
+  font: 13px "Helvetica Neue", Arial, sans-serif; }
+ol.substeps button { border-color: var(--line); }
+ol.substeps button[aria-current="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.steptext { min-height: 3.2em; }
+.subnav { display: flex; gap: 8px; margin-top: 10px; }
+figure { margin: 8px 0 14px; }
+figcaption { font: 13px/1.45 "Helvetica Neue", Arial, sans-serif; color: var(--ink-2); margin-top: 4px; max-width: 60em; }
+canvas.plot { display: block; width: 100%; height: 270px; background: var(--panel); border: 1px solid var(--grid); }
+canvas.plot.tall { height: 340px; }
+.pair { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; align-items: start; }
+@media (max-width: 760px) { .pair { grid-template-columns: 1fr; } }
+table { border-collapse: collapse; margin: 8px 0 10px; font: 14px/1.4 "Helvetica Neue", Arial, sans-serif; }
+th, td { padding: 4px 10px; border-bottom: 1px solid var(--grid); text-align: left; }
+th { font-weight: 600; color: var(--ink-2); border-bottom: 1px solid var(--muted); }
+table.num td:not(:first-child) { text-align: right; font-variant-numeric: tabular-nums; }
+.ok { color: var(--good); font-weight: 600; }
+.no { color: var(--bad); font-weight: 600; }
+.small { font-size: 14px; color: var(--ink-2); }
+.legend { display: flex; flex-wrap: wrap; gap: 4px 14px; font: 13px "Helvetica Neue", Arial, sans-serif; color: var(--ink-2); margin-top: 4px; }
+.legend span::before { content: ""; display: inline-block; width: 14px; height: 2px; background: var(--c); vertical-align: middle; margin-right: 5px; }
+.legend span.box::before { height: 10px; width: 10px; }
+.pager { display: flex; justify-content: space-between; margin-top: 30px; padding-top: 12px; border-top: 1px solid var(--line); }
+footer { margin-top: 30px; font: 13px "Helvetica Neue", Arial, sans-serif; color: var(--muted); }
