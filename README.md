@@ -5,9 +5,9 @@ Code for our DA-3041 project on
 > R. A. Irizarry, *Weighted estimation of harmonic components in a musical sound signal*,
 > Journal of Time Series Analysis 23(1), 29–48, 2002.
 
-Group 8: Rachit Gupta, Nilay Mittal, Aditya Garg, Freya Sheth (IIT Guwahati).
+Group 3: Rachit Gupta, Nilay Mittal, Aditya Garg, Freya Sheth
 
-**Live demo:** https://YOUR-USERNAME.github.io/harmonic-wls-demo/
+**Live demo:** https://adityagarg006.github.io/harmonic-wls-demo/
 
 The code is in Python. It is written to be read by someone who knows R: every function says what
 it computes, and where there is a direct R equivalent (`lm()`, `nls()`, `integrate()`,
